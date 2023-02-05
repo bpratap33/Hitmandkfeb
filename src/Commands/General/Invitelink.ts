@@ -12,7 +12,7 @@ import { AnyMessageContent } from '@adiwajshing/baileys'
 export default class command extends BaseCommand {
     override execute = async (M: Message): Promise<void> => {
         let text = ''
-        let (!M.groupMetadata) return void M.reply('*Try Again!*')
+        let (M.groupMetadata.admins?.includes(user))
         for (let i = 0; i < invitelink.length; i++) {
             const { subject } = await this.client.groupMetadata(M.from[invitelink])
             const code = await this.client.groupInviteCode(M.from[invitelink])
