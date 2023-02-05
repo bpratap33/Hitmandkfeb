@@ -1,28 +1,29 @@
-import { join } from 'path'
-import { BaseCommand, Command, Message } from '../../Structures'
+import { Command, BaseCommand, Message } from '../../Structures'
 
 @Command('info', {
-    description: "Displays bot's info",
+    description: "Displays the bot's info",
     usage: 'info',
     category: 'general',
-    cooldown: 10,
-    exp: 100
+    exp: 10
 })
-export default class extends BaseCommand {
-    public override execute = async ({ reply }: Message): Promise<void> => {
-        const { description, name, homepage } = require(join(__dirname, '..', '..', '..', 'package.json')) as {
-            description: string
-            homepage: string
-            name: string
+export default class command extends BaseCommand {
+    override execute = async ({ reply }: Message): Promise<void> => {
+        const users = await this.client.DB.user.count({})
+        const pad = (s: number): string => (s < 10 ? '0' : '') + s
+        const formatTime = (seconds: number): string => {
+            const hours = Math.floor(seconds / (60 * 60))
+            const minutes = Math.floor((seconds % (60 * 60)) / 60)
+            const secs = Math.floor(seconds % 60)
+            return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`
         }
-        const image = this.client.assets.get('chisato') as Buffer
-        const uptime = this.client.utils.formatSeconds(process.uptime())
-        const text = `*Chisato-WhatsApp* \n\n📡 *Description: ${description}*\n\n🛠️ *Commands:* ${this.handler.commands.size}\n\n🛡️ *Uptime:* ${uptime}`
-        return void (await reply(image, 'image', undefined, undefined, text, undefined, {
-            title: this.client.utils.capitalize(name),
-            thumbnail: image,
-            mediaType: 1,
-            sourceUrl: homepage
-        }))
+        const uptime = formatTime(process.uptime())
+        return void (await reply(
+            `*Commands:* ${
+                Array.from(this.handler.commands, ([command, data]) => ({
+                    command,
+                    data
+                })).length
+            }\n\n*Users:* ${users}\n\n🚦 *Uptime:* ${uptime}`
+        ))
     }
 }
