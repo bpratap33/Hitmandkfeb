@@ -9,8 +9,6 @@ export interface IConfig {
     chatBotUrl: string
     /**number of the users who's the bot admins of the bot */
     mods: string[]
-    /** JIDS of the lnvitelink */
-    invitelink: string[]
     /**port number where the server will be started */
     PORT: number
 }
