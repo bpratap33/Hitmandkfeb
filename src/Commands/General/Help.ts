@@ -35,7 +35,7 @@ export default class extends BaseCommand {
                 filteredCommands.forEach((command) => categoryCommands.push(command.data.name))
                 text += `\`\`\`${categoryCommands.join(', ')}\`\`\``
             }
-            text += `\n\n📕 *Note:* Use ${this.client.config.prefix}help <command_name> for more info of a specific command\n\n😻 Example: *${this.client.config.prefix}help 𝕙𝕖𝕝𝕝𝕠*\n\n♧︎︎︎𝐏𝐋𝐀𝐓𝐅𝐎𝐑𝐌 = 𝐊𝐎𝐘𝐄𝐁*`
+            text += `\n\n📕 *Note:* Use ${this.client.config.prefix}help <command_name> for more info of a specific command\n\n😻 Example: *${this.client.config.prefix}help 𝕙𝕖𝕝𝕝𝕠*`
             return void (await M.reply(buffer, 'video', true, undefined, text, [M.sender.jid]))
         } else {
             const cmd = context.trim().toLowerCase()
