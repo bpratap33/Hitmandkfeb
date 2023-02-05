@@ -126,6 +126,8 @@ export class Client extends (EventEmitter as new () => TypedEventEmitter<Events>
     public config: IConfig
 
     public contact = new Contact(this)
+  
+    public getAllGroups = async (): Promise<string[]> => Object.keys(await this.groupFetchAllParticipating())
 
     public correctJid = (jid: string): string => `${jid.split('@')[0].split(':')[0]}@s.whatsapp.net`
 
