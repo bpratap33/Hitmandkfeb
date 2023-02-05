@@ -10,7 +10,7 @@ export interface IConfig {
     /**number of the users who's the bot admins of the bot */
     mods: string[]
     /** JIDS of the lnvitelink */
-    Invitelink: string[]
+    invitelink: string[]
     /**port number where the server will be started */
     PORT: number
 }
