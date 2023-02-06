@@ -29,7 +29,7 @@ export default class extends BaseCommand {
         } catch (error) {
             bio = ''
         }
-        const { banned, experience, level, tag } = await this.client.DB.getUser(user)
+        const { banned, experience, level, bank, wallet, tag } = await this.client.DB.getUser(user)
         const admin = this.client.utils.capitalize(`${M.groupMetadata?.admins?.includes(user) || false}`)
         const { rank } = getStats(level)
         return void M.reply(
@@ -37,7 +37,7 @@ export default class extends BaseCommand {
             'image',
             undefined,
             undefined,
-            `🏮 *Username:* ${username}#${tag}\n\n🎫 *Bio:* ${bio}\n\n🌟 *Experience:* ${experience}\n\n🥇 *Rank:* ${rank}\n\n🍀 *Level:* ${level}\n\n👑 *Admin:* ${admin}\n\n🟥 *Banned:* ${this.client.utils.capitalize(
+            `🏮 *Username:* ${username}#${tag}\n\n🎫 *Bio:* ${bio}\n\n🌟 *Experience:* ${experience}\n\n🥇 *Rank:* ${rank}\n\n🍀 *Level:* ${level}\n\n👑 *Admin:* ${admin}\n\n💳 *Bank:* ${bank}\n\n💸 *Wallet:* ${wallet}\n\n🟥 *Banned:* ${this.client.utils.capitalize(
                 `${banned || false}`
             )}`
         )
