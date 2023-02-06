@@ -19,7 +19,7 @@ export default class extends BaseCommand {
             const image = this.client.assets.get('hitman') as Buffer
             const { nsfw } = await this.client.DB.getGroup(M.from)
             if (!nsfw) commands = commands.filter(({ data }) => data.config.category !== 'nsfw')
-            const buffer = await this.client.utils.getBuffer('https://telegra.ph/file/920ca4e7bb2ae61e3fe13.mp4')
+            const buffer = await this.client.utils.getBuffer('https://telegra.ph/file/868f5a30cb715966abf3b.mp4')
             let text = `hitman✨! *@${M.sender.jid.split('@')[0]}*, I'm ${
                 this.client.config.name
             }\nMy prefix is - "${this.client.config.prefix}"\n\n  1. *Don't Call* bots to avoid blocking \n\n  3. *The usable commands* are listed below.`
