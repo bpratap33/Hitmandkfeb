@@ -23,8 +23,6 @@ export default class extends BaseCommand {
         text += `🌐 *Visibility: ${result.visibility}*\n`
         text += `💠 *Language: ${result.language}*\n`
         text += `🛡️ *License: ${result.license.name}*\n`
-        text += `🛡️ *Followers: ${result.followers}*\n`
-        text += `🛡️ *Repository name: ${result.Repository.name}*\n`
         text += `⚙️ *Repo Link: ${result.html_url}*`
         return void (await M.reply(image, 'image', undefined, undefined, text))
     }
@@ -41,8 +39,6 @@ interface RepoInfo {
     stargazers_count: number
     watchers_count: number
     forks_count: number
-    Followers: number
-    Repository: string
     open_issues_count: number
     visibility: string
     license: {
