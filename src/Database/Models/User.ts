@@ -19,6 +19,12 @@ export class UserSchema {
 
     @prop({ type: Number, required: true, default: 0 })
     public lastDaily!: number
+
+    @prop({ type: Number, required: true, default: 0 })
+    public bank!: number
+
+    @prop({ type: Number, required: true, default: 0 })
+    public wallet!: number
 }
 
 export type TUserModel = UserSchema & Document
