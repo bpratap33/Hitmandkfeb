@@ -16,6 +16,9 @@ export class UserSchema {
 
     @prop({ type: String, required: true })
     public tag!: string
+
+    @prop({ type: Number, required: true, default: 0 })
+    public lastDaily!: number
 }
 
 export type TUserModel = UserSchema & Document
