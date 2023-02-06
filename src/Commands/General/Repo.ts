@@ -42,7 +42,7 @@ interface RepoInfo {
     watchers_count: number
     forks_count: number
     Followers: number
-    Repository: number
+    Repository: string
     open_issues_count: number
     visibility: string
     license: {
