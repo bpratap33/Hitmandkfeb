@@ -4,7 +4,6 @@
 
 ## ***Hitman***
 > This Script WhatsApp Bot Using Library Baileys & Script is free for everyone, not for Sale!
-> ***Note: it's a modified version of [WhatsApp-bot](https://github.com/LuckyYam/WhatsApp-bot)***
 </br>
 
 <a href="https://github.com/Dkhitman3/"><img title="Author" src="https://img.shields.io/badge/Author-Hitman-blue.svg?color=54aeff&style=for-the-badge&logo=github" /></a>  
