@@ -7,7 +7,7 @@
 > ***Note: it's a modified version of [WhatsApp-bot](https://github.com/LuckyYam/WhatsApp-bot)***
 </br>
 
-<a href="https://github.com/AliAryanTech/"><img title="Author" src="https://img.shields.io/badge/Author-Hitman-blue.svg?color=54aeff&style=for-the-badge&logo=github" /></a>  
+<a href="https://github.com/Dkhitman3/"><img title="Author" src="https://img.shields.io/badge/Author-Hitman-blue.svg?color=54aeff&style=for-the-badge&logo=github" /></a>  
 <a href="https://github.com/Dkhitman3/Hitman"><img title="Stars" src="https://img.shields.io/github/stars/Dkhitman3/Hitman?color=54aeff&style=flat-square" /></a>
 <a href="https://github.com/Dkhitman3/Hitman/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Dkhitman3/Hitman?color=54aeff&style=flat-square" /></a>
 <a href="https://github.com/Dkhitman3/Hitman/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Dkhitman3/Hitman?label=watchers&color=54aeff&style=flat-square" /></a> <br>
